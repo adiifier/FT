@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export function Card({
   MatchHeader,
   T1Logo,
@@ -8,8 +10,14 @@ export function Card({
   T1,
   T2,
 }) {
+  const navigate = useNavigate();
   return (
-    <div className="h-[150px] w-[240px] bg-w rounded-xl shadow-lg cursor-pointer m-10">
+    <div
+      className="h-[150px] w-[240px] bg-w rounded-xl shadow-lg cursor-pointer m-10"
+      onClick={() => {
+        navigate("/sc");
+      }}
+    >
       <div className="text-xs  m-3 pt-1 pl-2">{MatchHeader}</div>
 
       <div className=" grid grid-cols-[1fr_3fr_3fr]">

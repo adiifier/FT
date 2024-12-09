@@ -6,7 +6,7 @@ export function Entry() {
 
   setTimeout(() => {
     navigate("/Livescores");
-  }, 10000);
+  }, 3000);
 
   return (
     <div className="flex flex-col  items-center justify-center">
